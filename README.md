@@ -15,7 +15,7 @@ Uma arena de combate tático de tanques em 2D com física apurada, múltiplos mo
 ## 🚀 Links do Projeto
 
 * 🕹️ **[Clique aqui para Jogar direto no Navegador (Itch.io)](https://hakeemoloye.itch.io/tank-shooter)**
-* 📺 **[Assista ao Vídeo de Apresentação / Pitch no YouTube](COLE_AQUI_O_LINK_DO_SEU_VIDEO_DO_YOUTUBE)**
+* 📺 **[Assista ao Vídeo de Apresentação / Pitch no YouTube](https://youtu.be/QxbDz53fB0w)**
 
 ---
 
