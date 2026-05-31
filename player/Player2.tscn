@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://nxo17eo42utl"]
+
+[ext_resource type="Script" uid="uid://cq2rgrw3e5uir" path="res://player/player2.gd" id="1_dvu7w"]
+[ext_resource type="PackedScene" uid="uid://xn7yued057nv" path="res://projectiles/Bullet.tscn" id="2_iflxx"]
+[ext_resource type="Texture2D" uid="uid://de7u6g88bu31d" path="res://assets/sprites/L22_Bot.png" id="3_jd2b4"]
+[ext_resource type="Texture2D" uid="uid://c48vt4u0oq32l" path="res://assets/sprites/L22_Top.png" id="4_3bvkt"]
+[ext_resource type="Texture2D" uid="uid://wqbr3ohb260n" path="res://assets/sprites/SmokeFX Lite SpriteSheet 1A-14.png" id="4_42yhq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gskgj"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06mnu"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhpjh"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndjxb"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qrx2"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b32pr"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbkom"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4g0h"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4f8b"]
+atlas = ExtResource("4_42yhq")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e10er"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gskgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06mnu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhpjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndjxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qrx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b32pr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbkom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4g0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4f8b")
+}],
+"loop": true,
+"name": &"smoke",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iflxx"]
+size = Vector2(62, 42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bvkt"]
+bg_color = Color(0.23710465, 0.019216333, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42yhq"]
+bg_color = Color(0, 0.98039216, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="player2" type="CharacterBody2D" unique_id=147275678 groups=["players"]]
+position = Vector2(195, 865)
+script = ExtResource("1_dvu7w")
+bullet_scene = ExtResource("2_iflxx")
+
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=144396934]
+rotation = -1.5707964
+texture = ExtResource("3_jd2b4")
+
+[node name="SmokeFX" type="AnimatedSprite2D" parent="BaseSprite" unique_id=1794337064]
+position = Vector2(-19.999996, -64)
+rotation = -1.7592919
+scale = Vector2(1.4375, 1.5234375)
+sprite_frames = SubResource("SpriteFrames_e10er")
+animation = &"smoke"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1241869030]
+shape = SubResource("RectangleShape2D_iflxx")
+
+[node name="Turret" type="Node2D" parent="." unique_id=305176180]
+
+[node name="TurretSprite" type="Sprite2D" parent="Turret" unique_id=408037008]
+rotation = 1.5707964
+texture = ExtResource("4_3bvkt")
+
+[node name="GunPoint" type="Marker2D" parent="Turret" unique_id=1466762894]
+position = Vector2(40, 0)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1085351114]
+wait_time = 0.4
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=612858955]
+custom_minimum_size = Vector2(6, 40)
+offset_left = 19.0
+offset_top = -29.0
+offset_right = 25.0
+offset_bottom = 11.0
+rotation = 1.5707964
+theme_override_styles/background = SubResource("StyleBoxFlat_3bvkt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_42yhq")
+max_value = 20.0
+value = 20.0
+fill_mode = 3
+show_percentage = false

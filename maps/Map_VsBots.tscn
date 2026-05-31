@@ -1,0 +1,412 @@
+[gd_scene format=3 uid="uid://g22217lgac60"]
+
+[ext_resource type="Texture2D" uid="uid://djmdqvflppr8x" path="res://maps/playervsbots.png" id="1_r2sl8"]
+[ext_resource type="FontFile" uid="uid://det30vnqxfu10" path="res://assets/fonts/BridgeParapet.ttf" id="2_4yhjb"]
+[ext_resource type="Script" uid="uid://cpew1u6dq4qt0" path="res://maps/map_hud.gd" id="3_cnfxy"]
+[ext_resource type="PackedScene" uid="uid://b5iqikca5pr13" path="res://scenes/PauseMenu.tscn" id="4_er60y"]
+[ext_resource type="PackedScene" uid="uid://cjxppcqtqkfwr" path="res://maps/buff_manager.tscn" id="5_cnfxy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er60y"]
+size = Vector2(69, 891)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnfxy"]
+size = Vector2(79, 892.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jph0"]
+size = Vector2(1723.75, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b41i4"]
+size = Vector2(19.5, 1806.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6n1t"]
+size = Vector2(155.47852, 25.895294)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxve6"]
+size = Vector2(156, 73.12503)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj5bf"]
+size = Vector2(156, 73.12503)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3bxq"]
+size = Vector2(110.625, 58.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qujs8"]
+size = Vector2(42.063354, 191.93259)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mkmw"]
+size = Vector2(34.38669, 221.89545)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foiwr"]
+size = Vector2(179.5, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x88dn"]
+size = Vector2(155, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk85v"]
+size = Vector2(186.5, 62.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dno4j"]
+size = Vector2(157.5, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdyem"]
+size = Vector2(110.625, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14k3k"]
+size = Vector2(106.75, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ua6q"]
+size = Vector2(89, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1r1i"]
+size = Vector2(20, 106.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2712i"]
+size = Vector2(21.875, 119.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkpea"]
+size = Vector2(21.875, 119.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6w21"]
+size = Vector2(16, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llpqh"]
+size = Vector2(77, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mrm0"]
+size = Vector2(92.875, 59.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5hee"]
+size = Vector2(24, 50.25)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p7y8o"]
+radius = 33.0
+height = 112.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3pp4f"]
+radius = 33.0
+height = 112.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in1nu"]
+size = Vector2(24, 110.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8hcm"]
+size = Vector2(24, 110.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpdi1"]
+size = Vector2(24, 110.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6iqo"]
+size = Vector2(24, 50.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7o7d"]
+size = Vector2(83, 29.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yenf6"]
+size = Vector2(83, 29.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlw6a"]
+size = Vector2(80.5, 23.5625)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s5xtp"]
+font = ExtResource("2_4yhjb")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_er60y"]
+font = ExtResource("2_4yhjb")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_cnfxy"]
+font = ExtResource("2_4yhjb")
+font_size = 45
+
+[node name="MapVsBots" type="Node2D" unique_id=927346443 node_paths=PackedStringArray("label_p1", "label_p2", "label_bots", "label_round")]
+script = ExtResource("3_cnfxy")
+label_p1 = NodePath("P1")
+label_p2 = NodePath("P2")
+label_bots = NodePath("Bots")
+label_round = NodePath("Round")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1401662904]
+position = Vector2(961, 541)
+
+[node name="Background" type="TextureRect" parent="Camera2D" unique_id=726457319]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -537.0
+offset_right = 958.0
+offset_bottom = 543.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r2sl8")
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Obstacles" type="Node2D" parent="." unique_id=35160114]
+
+[node name="Barrier" type="StaticBody2D" parent="Obstacles" unique_id=639334086]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/Barrier" unique_id=1769303577]
+position = Vector2(96, 595)
+shape = SubResource("RectangleShape2D_er60y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/Barrier" unique_id=1791364407]
+position = Vector2(1835, 598)
+shape = SubResource("RectangleShape2D_cnfxy")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/Barrier" unique_id=1035395398]
+position = Vector2(962, 193)
+shape = SubResource("RectangleShape2D_3jph0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles/Barrier" unique_id=1555127733]
+position = Vector2(964, 1043)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_b41i4")
+
+[node name="Walls" type="StaticBody2D" parent="Obstacles" unique_id=327508520]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=1146796443]
+position = Vector2(177.00003, 915)
+rotation = 0.74700093
+shape = SubResource("RectangleShape2D_c6n1t")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=929058605]
+position = Vector2(1722.9999, 925.99994)
+rotation = -0.6527531
+shape = SubResource("RectangleShape2D_c6n1t")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=511648723]
+position = Vector2(312, 990.75)
+shape = SubResource("RectangleShape2D_qxve6")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=1537100076]
+position = Vector2(1632, 995.4375)
+shape = SubResource("RectangleShape2D_dj5bf")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=466397242]
+position = Vector2(1184.6875, 1004.75)
+shape = SubResource("RectangleShape2D_o3bxq")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=469216486]
+position = Vector2(163, 330.00003)
+rotation = 0.9372418
+shape = SubResource("RectangleShape2D_qujs8")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=386592387]
+position = Vector2(1754, 318.00006)
+rotation = -0.9372418
+shape = SubResource("RectangleShape2D_2mkmw")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=1022058107]
+position = Vector2(305.25, 263.5)
+shape = SubResource("RectangleShape2D_foiwr")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=436141337]
+position = Vector2(637.5, 268.5)
+shape = SubResource("RectangleShape2D_x88dn")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=1935071241]
+position = Vector2(1267, 267.25)
+shape = SubResource("RectangleShape2D_sk85v")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Obstacles/Walls" unique_id=1152784646]
+position = Vector2(1606.75, 264)
+shape = SubResource("RectangleShape2D_dno4j")
+
+[node name="houses" type="StaticBody2D" parent="Obstacles" unique_id=2002505692]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/houses" unique_id=29826616]
+position = Vector2(756, 634)
+shape = SubResource("RectangleShape2D_hdyem")
+
+[node name="slimwalls" type="StaticBody2D" parent="Obstacles" unique_id=626686976]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=593805688]
+position = Vector2(554, 414)
+shape = SubResource("RectangleShape2D_14k3k")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1392757677]
+position = Vector2(1376.625, 884)
+shape = SubResource("RectangleShape2D_14k3k")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=407118320]
+position = Vector2(511.5, 870.5)
+shape = SubResource("RectangleShape2D_5ua6q")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1497855414]
+position = Vector2(1364.75, 412.5)
+shape = SubResource("RectangleShape2D_14k3k")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=877978393]
+position = Vector2(503, 457)
+shape = SubResource("RectangleShape2D_w1r1i")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1809750917]
+position = Vector2(478, 841)
+shape = SubResource("RectangleShape2D_w1r1i")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=309442105]
+position = Vector2(1419, 456)
+shape = SubResource("RectangleShape2D_w1r1i")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1301733760]
+position = Vector2(1437, 842.1875)
+shape = SubResource("RectangleShape2D_w1r1i")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1141976122]
+position = Vector2(762, 463)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_2712i")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=731836460]
+position = Vector2(1130, 822.25)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_rkpea")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=676122590]
+position = Vector2(794, 831)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_b6w21")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=566469949]
+position = Vector2(1163.5, 473.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_llpqh")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=505999730]
+position = Vector2(658.5625, 1000.75)
+shape = SubResource("RectangleShape2D_1mrm0")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1746996519]
+position = Vector2(741, 425)
+shape = SubResource("RectangleShape2D_l5hee")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1964140667]
+position = Vector2(956, 341)
+shape = SubResource("CapsuleShape2D_p7y8o")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1978626777]
+position = Vector2(957, 902)
+shape = SubResource("CapsuleShape2D_3pp4f")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=472361026]
+position = Vector2(1174, 666.9375)
+shape = SubResource("RectangleShape2D_in1nu")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=530391957]
+position = Vector2(1331, 658)
+shape = SubResource("RectangleShape2D_c8hcm")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1970552942]
+position = Vector2(591, 640)
+shape = SubResource("RectangleShape2D_bpdi1")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=183394374]
+position = Vector2(741, 848)
+shape = SubResource("RectangleShape2D_n6iqo")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1931663350]
+position = Vector2(562.5, 690.4375)
+shape = SubResource("RectangleShape2D_u7o7d")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1782048491]
+position = Vector2(1134, 709)
+shape = SubResource("RectangleShape2D_yenf6")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=517847519]
+position = Vector2(1359.75, 701.21875)
+shape = SubResource("RectangleShape2D_rlw6a")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Obstacles/slimwalls" unique_id=1710312169]
+position = Vector2(1175, 848)
+shape = SubResource("RectangleShape2D_n6iqo")
+
+[node name="Spawn_Player1" type="Marker2D" parent="." unique_id=855996173]
+position = Vector2(261, 599)
+
+[node name="Spawn_Bot1" type="Marker2D" parent="." unique_id=1203791858]
+position = Vector2(1659, 597)
+
+[node name="P1" type="Label" parent="." unique_id=187960095]
+offset_left = 263.0
+offset_top = 124.0
+offset_right = 453.0
+offset_bottom = 169.0
+text = "0"
+label_settings = SubResource("LabelSettings_s5xtp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2" type="Label" parent="." unique_id=183445152]
+offset_left = 263.0
+offset_top = 124.0
+offset_right = 453.0
+offset_bottom = 169.0
+label_settings = SubResource("LabelSettings_s5xtp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Round" type="Label" parent="." unique_id=106287734]
+offset_left = 869.0
+offset_top = 66.0
+offset_right = 1051.0
+offset_bottom = 115.0
+text = "0/5"
+label_settings = SubResource("LabelSettings_er60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bots" type="Label" parent="." unique_id=6146540]
+offset_left = 1454.0
+offset_top = 123.0
+offset_right = 1648.0
+offset_bottom = 169.0
+text = "0"
+label_settings = SubResource("LabelSettings_cnfxy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseMenu" parent="." unique_id=1204705707 instance=ExtResource("4_er60y")]
+
+[node name="BtnPauseTela" type="Button" parent="." unique_id=1787604547]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 1116.0
+offset_top = 139.0
+offset_right = 1227.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_4yhjb")
+theme_override_font_sizes/font_size = 34
+text = "|| (Pause)"
+flat = true
+
+[node name="BuffManager" parent="." unique_id=1742481428 instance=ExtResource("5_cnfxy")]
+
+[node name="Ponto1" parent="BuffManager" index="0" unique_id=1684838831]
+position = Vector2(962, 619)
+
+[node name="Ponto2" parent="BuffManager" index="1" unique_id=727896961]
+position = Vector2(646, 503)
+
+[node name="Ponto3" parent="BuffManager" index="2" unique_id=1833110578]
+position = Vector2(1291, 825)
+
+[node name="Ponto4" parent="BuffManager" index="3" unique_id=375715861]
+position = Vector2(648, 816)
+
+[node name="Ponto5" parent="BuffManager" index="4" unique_id=1040847363]
+position = Vector2(1285, 473)
+
+[node name="Ponto6" parent="BuffManager" index="5" unique_id=617736986]
+position = Vector2(959, 998)
+
+[node name="Ponto7" parent="BuffManager" index="6" unique_id=1078819912]
+position = Vector2(965, 265)
+
+[connection signal="pressed" from="BtnPauseTela" to="PauseMenu" method="toggle_pause"]
+
+[editable path="BuffManager"]

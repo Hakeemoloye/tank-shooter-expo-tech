@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cjxppcqtqkfwr"]
+
+[ext_resource type="Script" uid="uid://dwq2s3ygnkvkq" path="res://scripts/buff_manager.gd" id="1_hpsq5"]
+
+[node name="BuffManager" type="Node2D" unique_id=1742481428]
+script = ExtResource("1_hpsq5")
+
+[node name="Ponto1" type="Marker2D" parent="." unique_id=1684838831]
+position = Vector2(944, 625)
+
+[node name="Ponto2" type="Marker2D" parent="." unique_id=727896961]
+position = Vector2(669, 517)
+
+[node name="Ponto3" type="Marker2D" parent="." unique_id=1833110578]
+position = Vector2(1239, 784)
+
+[node name="Ponto4" type="Marker2D" parent="." unique_id=375715861]
+position = Vector2(675, 776)
+
+[node name="Ponto5" type="Marker2D" parent="." unique_id=1040847363]
+position = Vector2(1232, 512)
+
+[node name="Ponto6" type="Marker2D" parent="." unique_id=617736986]
+position = Vector2(929, 957)
+
+[node name="Ponto7" type="Marker2D" parent="." unique_id=1078819912]
+position = Vector2(945, 343)

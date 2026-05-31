@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bdmygj5lvlo03"]
+
+[ext_resource type="Script" uid="uid://b3c85gyli58j5" path="res://scenes/buff_item.gd" id="1_otcna"]
+[ext_resource type="Texture2D" uid="uid://nq14u03dtr6h" path="res://assets/sprites/thumb_item_Fix_SmokeGrenade.png" id="1_vl5q1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_otcna"]
+radius = 15.132746
+
+[node name="BuffItem" type="Area2D" unique_id=1351977021 groups=["BuffItem"]]
+collision_layer = 0
+script = ExtResource("1_otcna")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=485799745]
+texture = ExtResource("1_vl5q1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1398485975]
+shape = SubResource("CircleShape2D_otcna")
