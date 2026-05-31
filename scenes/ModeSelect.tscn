@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://crr7todsohggv"]
+
+[ext_resource type="Script" uid="uid://7hgqu024ewhw" path="res://scenes/mode_select.gd" id="1_g0qvn"]
+[ext_resource type="Texture2D" uid="uid://c873dg6tyjnpw" path="res://assets/sprites/modeselectcerto.png" id="2_h31sw"]
+
+[node name="ModeSelect" type="Control" unique_id=1167266478]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g0qvn")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1901833294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h31sw")
+
+[node name="CoopBots" type="Button" parent="." unique_id=1101220182]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 307.0
+offset_right = 1450.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 28
+text = " "
+flat = true
+
+[node name="Back" type="Button" parent="." unique_id=57059807]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 833.0
+offset_right = 1448.0
+offset_bottom = 970.0
+theme_override_font_sizes/font_size = 28
+text = " "
+flat = true
+
+[node name="SoloBots" type="Button" parent="." unique_id=100319832]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 483.0
+offset_right = 1453.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 28
+text = " "
+flat = true
+
+[node name="PvP" type="Button" parent="." unique_id=1711573769]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 655.0
+offset_right = 1444.0
+offset_bottom = 790.0
+theme_override_font_sizes/font_size = 28
+text = " "
+flat = true

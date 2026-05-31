@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b7gl82b8rvpr5"]
+
+[ext_resource type="Script" uid="uid://bh1ldhuokt3kj" path="res://scenes/options_menu.gd" id="1_ijpji"]
+[ext_resource type="Texture2D" uid="uid://ccmj8721hyw8h" path="res://assets/sprites/options2.png" id="2_ijpji"]
+
+[node name="OptionsMenu" type="Control" unique_id=1410235396]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijpji")
+
+[node name="Background" type="TextureRect" parent="." unique_id=821324638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ijpji")
+
+[node name="MasterVolume" type="HSlider" parent="." unique_id=522764036]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 373.0
+offset_right = 1444.0
+offset_bottom = 423.0
+value = 80.0
+
+[node name="FullscreenToggle" type="CheckButton" parent="." unique_id=1685976030]
+layout_mode = 0
+offset_left = 1089.0
+offset_top = 521.0
+offset_right = 1356.0
+offset_bottom = 579.0
+theme_override_font_sizes/font_size = 36
+text = "FULLSCREEN
+"
+
+[node name="ResolutionSelector" type="OptionButton" parent="." unique_id=344794071]
+layout_mode = 0
+offset_left = 1106.0
+offset_top = 678.0
+offset_right = 1306.0
+offset_bottom = 730.0
+item_count = 4
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1366x768"
+popup/item_2/id = 2
+popup/item_3/text = "1280x720"
+popup/item_3/id = 3
+
+[node name="Back" type="Button" parent="." unique_id=1378949248]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 830.0
+offset_right = 1261.0
+offset_bottom = 940.0
+theme_override_font_sizes/font_size = 36
+text = " "
+flat = true

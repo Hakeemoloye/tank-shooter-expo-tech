@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b42yacaldwuu0"]
+
+[ext_resource type="Script" uid="uid://b58vpy72e0hir" path="res://scenes/main.gd" id="1_vcsgt"]
+
+[node name="Main" type="Node2D" unique_id=1549474338]
+position = Vector2(123, 87)
+script = ExtResource("1_vcsgt")
+
+[node name="CurrentMap" type="Node2D" parent="." unique_id=1695887113]

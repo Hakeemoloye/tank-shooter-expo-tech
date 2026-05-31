@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b5iqikca5pr13"]
+
+[ext_resource type="Script" uid="uid://1es732kg74" path="res://scenes/pause_menu.gd" id="1_g4jo0"]
+[ext_resource type="FontFile" uid="uid://det30vnqxfu10" path="res://assets/fonts/BridgeParapet.ttf" id="1_jvnd5"]
+
+[sub_resource type="Theme" id="Theme_g4jo0"]
+default_font = ExtResource("1_jvnd5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4jo0"]
+font = ExtResource("1_jvnd5")
+font_size = 134
+outline_size = 45
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1204705707]
+script = ExtResource("1_g4jo0")
+
+[node name="MenuPainel" type="Control" parent="." unique_id=1513403978]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_g4jo0")
+
+[node name="FundoEscuro" type="ColorRect" parent="MenuPainel" unique_id=2063746620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4509804)
+
+[node name="VBox" type="VBoxContainer" parent="MenuPainel" unique_id=1948773773]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MenuPainel/VBox" unique_id=485943086]
+layout_mode = 2
+text = "JOGO PAUSADO"
+label_settings = SubResource("LabelSettings_g4jo0")
+
+[node name="BtnContinuar" type="Button" parent="MenuPainel/VBox" unique_id=1534190894]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 40
+text = "Continuar"
+
+[node name="BtnReiniciar" type="Button" parent="MenuPainel/VBox" unique_id=29139903]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 40
+text = "Reiniciar Partida"
+
+[node name="BtnMenu" type="Button" parent="MenuPainel/VBox" unique_id=490062439]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 40
+text = "Voltar ao Menu"
+
+[connection signal="pressed" from="MenuPainel/VBox/BtnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="MenuPainel/VBox/BtnReiniciar" to="." method="_on_btn_reiniciar_pressed"]
+[connection signal="pressed" from="MenuPainel/VBox/BtnMenu" to="." method="_on_btn_menu_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://8xjvt8pgsina"]
+
+[ext_resource type="Script" uid="uid://esrndyk53hdw" path="res://scenes/instructions_screen.gd" id="1_rdp1t"]
+[ext_resource type="Texture2D" uid="uid://x66r03eo7be7" path="res://assets/sprites/tela_instrucoes.png" id="1_tvdym"]
+
+[node name="InstructionsScreen" type="CanvasLayer" unique_id=1944193492]
+script = ExtResource("1_rdp1t")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1140493865]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tvdym")
+expand_mode = 1

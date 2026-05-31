@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dnpiicd5mxxxy"]
+
+[ext_resource type="Script" uid="uid://e3a7e166se5m" path="res://scenes/main_menu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://cmbljjxye52gn" path="res://assets/sprites/tankshooter.png" id="2_0ykhv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+bg_color = Color(0.15294118, 0.17254902, 0.078431375, 1)
+border_color = Color(0.64705884, 0.8392157, 0.654902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh52"]
+bg_color = Color(0.4, 0.73333335, 0.41568628, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
+bg_color = Color(0.16078432, 0.05882353, 0.043137256, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
+bg_color = Color(0.11372549, 0.11372549, 0.105882354, 1)
+
+[node name="MainMenu" type="Control" unique_id=252467642]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqorp")
+
+[node name="Background" type="TextureRect" parent="." unique_id=446577877]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0ykhv")
+expand_mode = 1
+
+[node name="Play" type="Button" parent="." unique_id=1489745682]
+custom_minimum_size = Vector2(460, 75)
+layout_mode = 0
+offset_left = 596.0
+offset_top = 547.0
+offset_right = 1323.0
+offset_bottom = 656.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ykhv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2wh52")
+text = " "
+flat = true
+
+[node name="Quit" type="Button" parent="." unique_id=1781234645]
+custom_minimum_size = Vector2(400, 75)
+layout_mode = 0
+offset_left = 595.0
+offset_top = 820.0
+offset_right = 1322.0
+offset_bottom = 933.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ow34m")
+text = " "
+flat = true
+
+[node name="Options" type="Button" parent="." unique_id=1691360698]
+custom_minimum_size = Vector2(400, 75)
+layout_mode = 0
+offset_left = 597.0
+offset_top = 684.0
+offset_right = 1323.0
+offset_bottom = 792.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_l72w3")
+text = " "
+flat = true

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b24maxamyqtqd"]
+
+[ext_resource type="Script" uid="uid://c0634c4awgwqd" path="res://scenes/game_over_screen.gd" id="1_61w2s"]
+[ext_resource type="FontFile" uid="uid://det30vnqxfu10" path="res://assets/fonts/BridgeParapet.ttf" id="1_gt22q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w3hxg"]
+font = ExtResource("1_gt22q")
+font_size = 134
+outline_size = 45
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOverScreen" type="CanvasLayer" unique_id=570000956]
+process_mode = 3
+script = ExtResource("1_61w2s")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1135458524]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="CaixaVertical" type="VBoxContainer" parent="." unique_id=38770675]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titulo" type="Label" parent="CaixaVertical" unique_id=1625355219]
+layout_mode = 2
+text = "FIM DE JOGO!!"
+label_settings = SubResource("LabelSettings_w3hxg")
+
+[node name="VencedorTexto" type="Label" parent="CaixaVertical" unique_id=179324074]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_gt22q")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="BtnJogarNovamente" type="Button" parent="CaixaVertical" unique_id=1473276252]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gt22q")
+theme_override_font_sizes/font_size = 40
+text = "Jogar novamente"
+
+[node name="BtnMenu" type="Button" parent="CaixaVertical" unique_id=802063915]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_gt22q")
+theme_override_font_sizes/font_size = 40
+text = "Menu Principal"
